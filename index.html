@@ -27,11 +27,35 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <p>Free OPC-UA is C++ library develop server and client OPC-UA applications. Python bindings can be found in the opcua-python repository. The library is under development but works will all tested clients. It support addressspace browse, read, write and address space modification as well as subscriptions and datachange events.</p>
+        <p>Free OPC-UA is C++ library develop server and client OPC-UA applications. Python bindings can be found in the opcua-python repository. </p>
 
-<p>history is not yet supported</p>
+<p>The library is under development but works will all tested clients. It support addressspace browse, read, write and address space modification as well as subscriptions and datachange events.</p>
 
-<p>see examples in exe folder or the examples in python repository</p>
+<p>History is not yet supported</p>
+
+<p>All expected OPC-UA objects are implemented in C++. Higher level Server, Client and Node objects are also available.</p>
+
+<p>Example high level Python server code:</p>
+
+<pre><code>s = opcua.Server()
+s.load_cpp_addressspace(True)
+s.set_endpoint("opc.tcp://192.168.56.1:4841")
+s.start()
+try;
+    objects = s.get_objects_node()
+
+    m = objects.add_folder("2:MyFolder")
+    v = m.add_variable("2:MyVariable", 3)
+
+    count = 0
+    while True;
+        count += 1
+        v.set_value(count)
+    time.sleep(1);
+
+finally:
+    s.stop()
+</code></pre>
       </section>
     </div>
 
