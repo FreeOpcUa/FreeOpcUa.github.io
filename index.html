@@ -56,11 +56,12 @@ finally:
     s.stop()
 </code></pre>
 
-<p>Or write lower level code in C++
-    ...
-    Server = OpcUa::Remote::Connect(Endpoint);</p>
+<p>Or write lower level code in C++</p>
 
-<pre><code>OpcUa::Remote::SessionParameters session;
+<pre><code>...
+Server = OpcUa::Remote::Connect(Endpoint);
+
+OpcUa::Remote::SessionParameters session;
 session.ClientDescription.URI = Uri;
 session.ClientDescription.ProductURI = Uri;
 session.ClientDescription.Name.Text = SessionName;
