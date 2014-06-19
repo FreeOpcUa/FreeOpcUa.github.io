@@ -74,6 +74,21 @@ Server-&gt;CreateSession(session);
 Server-&gt;ActivateSession();
 ...
 </code></pre>
+
+<p>Next you can try compiling the code using the standard ./configure; make; make install commands or using the opcua-cmake repository <a href="https://github.com/FreeOpcUa/opcua-cmake">https://github.com/FreeOpcUa/opcua-cmake</a></p>
+
+<p>C++ sample code can be found here:
+<a href="https://github.com/FreeOpcUa/opcua-server/blob/master/exe/src/example.cpp">https://github.com/FreeOpcUa/opcua-server/blob/master/exe/src/example.cpp</a></p>
+
+<p>and then try to communicate with server using an opc-ua client (There are many free clients on the net)</p>
+
+<p>I you want to use lower level api then have a look at:
+<a href="https://github.com/FreeOpcUa/opcua-server/blob/master/exe/src/server_main.cpp">https://github.com/FreeOpcUa/opcua-server/blob/master/exe/src/server_main.cpp</a>
+<a href="https://github.com/FreeOpcUa/opcua-core/blob/master/src/node.cpp">https://github.com/FreeOpcUa/opcua-core/blob/master/src/node.cpp</a>
+<a href="https://github.com/FreeOpcUa/opcua-server/blob/master/server/src/opcuaserver.cpp">https://github.com/FreeOpcUa/opcua-server/blob/master/server/src/opcuaserver.cpp</a></p>
+
+<p>And if you want to test client api:
+<a href="https://github.com/oroulet/opcua-client/blob/master/src/example_main.cpp">https://github.com/oroulet/opcua-client/blob/master/src/example_main.cpp</a></p>
       </section>
     </div>
 
