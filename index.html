@@ -4,7 +4,7 @@
   <head>
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Freeopcua.github.io : FreeOPCUA: A C++ OPC-UA Server and Client Library" />
+    <meta name="description" content="Freeopcua.github.io : FreeOPCUA: An Open Source C++ OPC-UA Server and Client Library" />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
@@ -19,7 +19,7 @@
           <a id="forkme_banner" href="https://github.com/FreeOpcUa">View on GitHub</a>
 
           <h1 id="project_title">Freeopcua.github.io</h1>
-          <h2 id="project_tagline">FreeOPCUA: A C++ OPC-UA Server and Client Library</h2>
+          <h2 id="project_tagline">FreeOPCUA: An Open Source C++ OPC-UA Server and Client Library</h2>
 
         </header>
     </div>
@@ -27,7 +27,7 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <p>Free OPC-UA is C++ library develop server and client OPC-UA applications. Python bindings can be found in the opcua-python repository. </p>
+        <p>Free OPC-UA is LGPL C++ library to develop server and client OPC-UA applications. Python bindings can be found in the opcua-python repository. </p>
 
 <p>The library is under development but works will all tested clients. It support addressspace browse, read, write and address space modification as well as subscriptions and datachange events.</p>
 
@@ -35,7 +35,12 @@
 
 <p>All expected OPC-UA objects are implemented in C++. Higher level Server, Client and Node objects are also available.</p>
 
-<p>Example high level Python server code:</p>
+<ul>
+<li>Mailing list: <a href="https://groups.google.com/forum/#!forum/freeopcua">https://groups.google.com/forum/#!forum/freeopcua</a>
+</li>
+<li>Source code: <a href="https://github.com/FreeOpcUa">https://github.com/FreeOpcUa</a>
+</li>
+</ul><p>Example high level Python server code:</p>
 
 <pre><code>s = opcua.Server()
 s.set_endpoint("opc.tcp://192.168.56.1:4841")
@@ -88,13 +93,17 @@ Server-&gt;ActivateSession();
 
 <p>and then try to communicate with server using an opc-ua client (There are many free clients on the net)</p>
 
-<p>I you want to use lower level api then have a look at:
-<a href="https://github.com/FreeOpcUa/opcua-server/blob/master/exe/src/server_main.cpp">https://github.com/FreeOpcUa/opcua-server/blob/master/exe/src/server_main.cpp</a>
-<a href="https://github.com/FreeOpcUa/opcua-core/blob/master/src/node.cpp">https://github.com/FreeOpcUa/opcua-core/blob/master/src/node.cpp</a>
-<a href="https://github.com/FreeOpcUa/opcua-server/blob/master/server/src/opcuaserver.cpp">https://github.com/FreeOpcUa/opcua-server/blob/master/server/src/opcuaserver.cpp</a></p>
+<p>I you want to use lower level api then have a look at:</p>
 
-<p>And if you want to test client api:
-<a href="https://github.com/FreeOpcUa/opcua-client/blob/master/src/example_main.cpp">https://github.com/FreeOpcUa/opcua-client/blob/master/src/example_main.cpp</a></p>
+<ul>
+<li><a href="https://github.com/FreeOpcUa/opcua-server/blob/master/exe/src/server_main.cpp">https://github.com/FreeOpcUa/opcua-server/blob/master/exe/src/server_main.cpp</a></li>
+<li><a href="https://github.com/FreeOpcUa/opcua-core/blob/master/src/node.cpp">https://github.com/FreeOpcUa/opcua-core/blob/master/src/node.cpp</a></li>
+<li><a href="https://github.com/FreeOpcUa/opcua-server/blob/master/server/src/opcuaserver.cpp">https://github.com/FreeOpcUa/opcua-server/blob/master/server/src/opcuaserver.cpp</a></li>
+</ul><p>And if you want to test client api:</p>
+
+<ul>
+<li><a href="https://github.com/FreeOpcUa/opcua-client/blob/master/src/example_main.cpp">https://github.com/FreeOpcUa/opcua-client/blob/master/src/example_main.cpp</a></li>
+</ul>
       </section>
     </div>
 
