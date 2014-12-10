@@ -40,16 +40,22 @@
 </li>
 <li>Source code: <a href="https://github.com/FreeOpcUa">https://github.com/FreeOpcUa</a>
 </li>
-</ul><p>Example high level Python server code:</p>
+</ul>
 
-<pre><code>s = opcua.Server()
-s.set_endpoint("opc.tcp://192.168.56.1:4841")
-s.start()
-try;
-    objects = s.get_objects_node()
+<p>Example high level Python server code:</p>
 
-    m = objects.add_folder("2:MyFolder")
-    v = m.add_variable("2:MyVariable", 3)
+<pre><code>server = opcua.Server()
+server.set_endpoint("opc.tcp://192.168.56.1:4841")
+server.start()
+try:
+
+    uri = "http://examples.freeopcua.github.io"
+    idx = server.register_namespace(uri)
+
+    objects = server.get_objects_node()
+
+    myfolder = objects.add_folder(idx, "MyFolder")
+    myvariable = myfolder.add_variable(idx, "MyVariable", 3)
 
     count = 0
     while True;
@@ -58,7 +64,7 @@ try;
     time.sleep(1);
 
 finally:
-    s.stop()
+    server.stop()
 </code></pre>
 
 <p>Or write lower level code in C++</p>
@@ -81,12 +87,12 @@ Server-&gt;ActivateSession();
 </code></pre>
 
 <h2>
-<a name="getting-started" class="anchor" href="#getting-started"><span class="octicon octicon-link"></span></a>Getting Started</h2>
+<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting Started</h2>
 
 <p>Next you can try compiling the code using the standard ./configure; make; make install commands</p>
 
 <h3>
-<a name="example-code" class="anchor" href="#example-code"><span class="octicon octicon-link"></span></a>Example code</h3>
+<a id="example-code" class="anchor" href="#example-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example code</h3>
 
 <p>C++ sample code can be found here:
 <a href="https://github.com/FreeOpcUa/freeopcua/tree/master/src/examples">https://github.com/FreeOpcUa/freeopcua/tree/master/src/examples</a></p>
