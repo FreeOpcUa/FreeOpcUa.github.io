@@ -1,124 +1,43 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en-us">
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Freeopcua.github.io : FreeOPCUA: An Open Source C++ OPC-UA Server and Client Library">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Freeopcua.github.io</title>
+    <meta charset="UTF-8">
+    <title>Freeopcua.github.io by FreeOpcUa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
-
   <body>
+    <section class="page-header">
+      <h1 class="project-name">Freeopcua.github.io</h1>
+      <h2 class="project-tagline">FreeOPCUA: An Open Source C++ OPC-UA Server and Client Library</h2>
+    </section>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/FreeOpcUa">View on GitHub</a>
+    <section class="main-content">
+      <p>FreeOpcUa is a project to implement an open-source (LGPL) OPC-UA stack. </p>
 
-          <h1 id="project_title">Freeopcua.github.io</h1>
-          <h2 id="project_tagline">FreeOPCUA: An Open Source C++ OPC-UA Server and Client Library</h2>
-
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <p>Free OPC-UA is LGPL C++ library to develop server and client OPC-UA applications. Python bindings can be found in the opcua-python repository. </p>
-
-<p>In addition an OPC-UA Python Client and Server library, written entirely in python, is available: <a href="https://github.com/FreeOpcUa/python-opcua">https://github.com/FreeOpcUa/python-opcua</a></p>
-
-<p>The C++ library is under development but works will all tested clients and servers. It support addressspace browse, read, write and address space modification as well as subscriptions and datachange events and method calls(the last one only on client).</p>
-
-<p>History is not yet supported</p>
-
-<p>All expected OPC-UA objects are implemented in C++. Higher level Server, Client and Node objects are also available.</p>
+<p>Currently FreeOpcUa is composed of</p>
 
 <ul>
-<li>Mailing list: <a href="https://groups.google.com/forum/#!forum/freeopcua">https://groups.google.com/forum/#!forum/freeopcua</a>
+<li>a LGPL C++ library to develop server and client OPC-UA applications. Python bindings can be found in the opcua-python repository. <a href="https://github.com/FreeOpcUa/freeopcua">https://github.com/FreeOpcUa/freeopcua</a>
 </li>
+<li>a Python OPC-UA Python Client and Server library, written entirely in python, available at: <a href="https://github.com/FreeOpcUa/python-opcua">https://github.com/FreeOpcUa/python-opcua</a>
+</li>
+<li><p>a simple GUI client <a href="https://github.com/FreeOpcUa/opcua-client-gui">https://github.com/FreeOpcUa/opcua-client-gui</a></p></li>
+<li><p>Mailing list: <a href="https://groups.google.com/forum/#!forum/freeopcua">https://groups.google.com/forum/#!forum/freeopcua</a></p></li>
 <li>Source code: <a href="https://github.com/FreeOpcUa">https://github.com/FreeOpcUa</a>
 </li>
 </ul>
 
-<p>Example high level Python server code:</p>
+      <footer class="site-footer">
 
-<pre><code>server = opcua.Server()
-server.set_endpoint("opc.tcp://192.168.56.1:4841")
-server.start()
-try:
-
-    uri = "http://examples.freeopcua.github.io"
-    idx = server.register_namespace(uri)
-
-    objects = server.get_objects_node()
-
-    myfolder = objects.add_folder(idx, "MyFolder")
-    myvariable = myfolder.add_variable(idx, "MyVariable", 3)
-
-    count = 0
-    while True;
-        count += 1
-        v.set_value(count)
-    time.sleep(1);
-
-finally:
-    server.stop()
-</code></pre>
-
-<p>Or write lower level code in C++</p>
-
-<pre><code>...
-Server = OpcUa::Remote::Connect(Endpoint);
-
-OpcUa::Remote::SessionParameters session;
-session.ClientDescription.URI = Uri;
-session.ClientDescription.ProductURI = Uri;
-session.ClientDescription.Name.Text = SessionName;
-session.ClientDescription.Type = OpcUa::ApplicationType::CLIENT;
-session.SessionName = SessionName;
-session.EndpointURL = Endpoint;
-session.Timeout = 1200000;
-
-Server-&gt;CreateSession(session);
-Server-&gt;ActivateSession();
-...
-</code></pre>
-
-<h2>
-<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting Started</h2>
-
-<p>Next you can try compiling the code using the standard ./configure; make; make install commands</p>
-
-<h3>
-<a id="example-code" class="anchor" href="#example-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example code</h3>
-
-<p>C++ sample code can be found here:
-<a href="https://github.com/FreeOpcUa/freeopcua/tree/master/src/examples">https://github.com/FreeOpcUa/freeopcua/tree/master/src/examples</a></p>
-
-<p>and then try to communicate with server using an opc-ua client (There are many free clients on the net)</p>
-
-<p>I you want to use lower level api then have a look at:</p>
-
-<ul>
-<li><a href="https://github.com/FreeOpcUa/freeopcua/blob/master/src/server/opcuaserver.cpp">https://github.com/FreeOpcUa/freeopcua/blob/master/src/server/opcuaserver.cpp</a></li>
-<li><a href="https://github.com/FreeOpcUa/freeopcua/blob/master/src/core/node.cpp">https://github.com/FreeOpcUa/freeopcua/blob/master/src/core/node.cpp</a></li>
-<li><a href="https://github.com/FreeOpcUa/freeopcua/blob/master/src/client/client.cpp">https://github.com/FreeOpcUa/freeopcua/blob/master/src/client/client.cpp</a></li>
-</ul>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
-    </div>
 
-    
+    </section>
 
+  
   </body>
 </html>
