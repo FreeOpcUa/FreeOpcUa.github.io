@@ -2,7 +2,7 @@ title: Freeopcua.github.io
 description: "FreeOpcUa: Open Source C++ and Python OPC-UA Server and Client Libraries and Tools"
 google_analytics: 
 show_downloads: true
-theme: jekyll-theme-cayman
+theme: jekyll-theme-slate
 
 gems:
   - jekyll-mentions
