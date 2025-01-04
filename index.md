@@ -1,6 +1,6 @@
-# FreeOpcUa is a project to facilitate implementation and maintainance of open-source OPC-UA stacks and associated tools. 
+FreeOpcUa is a project to facilitate implementation and maintainance of open-source OPC-UA stacks and associated tools. 
 
-## Currently FreeOpcUa is composed of the following active projects:
+urrently FreeOpcUa is composed of the following active projects:
 
 * a Rust OPC UA stack https://github.com/FreeOpcUa/rust-opcua under the Mozilla Public License Version 2.0
 
@@ -11,7 +11,7 @@
 * A GPL Python GUI client: https://github.com/FreeOpcUa/opcua-client-gui
   * Install using `pip install opcua-client`
 
-## The following projcts are deprecated or not maintained anymore but anyone is welcome is take them over:
+The following projcts are deprecated or not maintained anymore but anyone is welcome is take them over:
 
 * A synchronous LGPL Python OPC-UA client and server library (written entirely in Python): https://github.com/FreeOpcUa/python-opcua
   * Install using `pip install opcua`
