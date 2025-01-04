@@ -1,4 +1,4 @@
-FreeOpcUa is a project designed to simplify the implementation and maintenance of open-source OPC-UA stacks and associated tools.
+FreeOpcUa is a project created to support the implementation and maintenance of open-source OPC-UA stacks and associated tools.
 
 Currently, FreeOpcUa comprises the following active projects:
 
