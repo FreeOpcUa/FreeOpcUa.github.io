@@ -1,6 +1,6 @@
 title: Freeopcua.github.io
-description: "FreeOpcUa: Open Source C++ and Python OPC-UA Server and Client Libraries and Tools"
-google_analytics: 
+description: "FreeOpcUa: Open Source Rust and Python OPC-UA Client and Server Libraries and Tools"
+google_analytics:
 show_downloads: true
 theme: jekyll-theme-slate
 

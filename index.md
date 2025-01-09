@@ -2,7 +2,7 @@ FreeOpcUa is a project created to support the implementation and maintenance of 
 
 Currently, FreeOpcUa comprises the following active projects:
 
-    Rust OPC UA stack: https://github.com/FreeOpcUa/rust-opcua
+    Rust OPC UA client and server: https://github.com/FreeOpcUa/rust-opcua
     Licensed under the Mozilla Public License Version 2.0.
 
     Asynchronous Python OPC-UA client and server library: https://github.com/FreeOpcUa/opcua-asyncio
@@ -27,4 +27,3 @@ The following projects are deprecated or no longer maintained. However, contribu
     Python GUI for creating OPC-UA nodes and saving them as XML: https://github.com/FreeOpcUa/opcua-modeler
     Licensed under GPL.
         Install using: pip install opcua-modeler.
-
